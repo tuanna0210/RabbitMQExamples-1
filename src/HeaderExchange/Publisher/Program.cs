@@ -39,7 +39,9 @@ class Program
         _channel.QueueBind("demo-header-queue-1", "header-exchange", string.Empty, new Dictionary<string, object>()
         {
             { "material", "wood"},
-            { "color", "black"}
+            { "color", "black"},
+            { "x-match", "all" },
+            //{ "x-match", "any" }
         });
     }
 
